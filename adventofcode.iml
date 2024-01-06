@@ -22,6 +22,7 @@
     <orderEntry type="library" name="Deps: org.clojure/math.combinatorics:0.2.0" level="project" />
     <orderEntry type="library" name="Deps: cheshire:5.11.0" level="project" />
     <orderEntry type="library" name="Deps: tigris:0.1.2" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/data.priority-map:1.1.0" level="project" />
     <orderEntry type="library" name="Deps: com.fasterxml.jackson.dataformat/jackson-dataformat-smile:2.13.3" level="project" />
   </component>
 </module>
