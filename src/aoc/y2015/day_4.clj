@@ -1,13 +1,5 @@
 (ns aoc.y2015.day-4
-  (:import (java.security MessageDigest)))
-
-(defn- md5-hash [s]
-  (->> s
-       .getBytes
-       (.digest (MessageDigest/getInstance "MD5"))
-       (map byte)
-       (map #(format "%02x" %))
-       (apply str)))
+  (:require [utils :refer [md5-hash]]))
 
 (defn- solve
   [input n]
