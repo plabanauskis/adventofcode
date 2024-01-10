@@ -1,0 +1,13 @@
+(ns core-test.y2016.day-20-test
+  (:require [clojure.test :refer :all]
+            [aoc.y2016.day-20 :as day-20]
+            [utils :refer [read-resource]]))
+
+(deftest part-1
+  (testing "1"
+    (is (= (day-20/part-1 (read-resource "2016-test/20.txt")) 3))))
+
+(deftest part-2
+  (testing "1"
+    (with-bindings {#'day-20/max-ip 9}
+      (is (= (day-20/part-2 (read-resource "2016-test/20.txt")) 2)))))
