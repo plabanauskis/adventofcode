@@ -19,11 +19,11 @@
 
 (defn solve []
   ;(solve-day 1)
-  (solve-day 2)
+  ;(solve-day 2)
   ;(solve-day 3)
   ;(solve-day 4)
   ;(solve-day 5)
-  ;(solve-day 6)
+  (solve-day 6)
   ;(solve-day 7)
   ;(solve-day 8)
   ;(solve-day 9)

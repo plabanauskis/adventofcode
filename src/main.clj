@@ -6,6 +6,6 @@
 (defn -main
   [& args]
   ;(aoc.y2015.core/solve)
-  (aoc.y2016.core/solve)
-  ;(aoc.y2017.core/solve)
+  ;(aoc.y2016.core/solve)
+  (aoc.y2017.core/solve)
   )
