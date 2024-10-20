@@ -4,8 +4,8 @@
 
 (deftest part-1
   (testing "10"
-    (is (= (day-10/part-1 "1") 82350))))
+    (is (= 82350 (day-10/part-1 "1")))))
 
 (deftest part-2
   (testing "10"
-    (is (= (day-10/part-2 "1") 1166642))))
+    (is (= 1166642 (day-10/part-2 "1")))))

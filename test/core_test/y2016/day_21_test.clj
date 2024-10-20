@@ -6,4 +6,4 @@
 (deftest part-1
   (testing "1"
     (with-bindings {#'day-21/password-pt1 "abcde"}
-      (is (= (day-21/part-1 (read-resource "2016-test/21.txt")) "decab")))))
+      (is (= "decab" (day-21/part-1 (read-resource "2016-test/21.txt")))))))

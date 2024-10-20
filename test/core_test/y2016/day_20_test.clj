@@ -5,9 +5,9 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-20/part-1 (read-resource "2016-test/20.txt")) 3))))
+    (is (= 3 (day-20/part-1 (read-resource "2016-test/20.txt"))))))
 
 (deftest part-2
   (testing "1"
     (with-bindings {#'day-20/max-ip 9}
-      (is (= (day-20/part-2 (read-resource "2016-test/20.txt")) 2)))))
+      (is (= 2 (day-20/part-2 (read-resource "2016-test/20.txt")))))))

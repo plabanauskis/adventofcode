@@ -5,8 +5,8 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-2/part-1 (read-resource "2016-test/2.txt")) "1985"))))
+    (is (= "1985" (day-2/part-1 (read-resource "2016-test/2.txt"))))))
 
 (deftest part-2
   (testing "1"
-    (is (= (day-2/part-2 (read-resource "2016-test/2.txt")) "5DB3"))))
+    (is (= "5DB3" (day-2/part-2 (read-resource "2016-test/2.txt"))))))

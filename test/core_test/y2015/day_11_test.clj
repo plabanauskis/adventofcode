@@ -4,5 +4,5 @@
 
 (deftest part-1
   (testing "11"
-    (is (= (day-11/part-1 "abcdefgh") "abcdffaa"))
-    (is (= (day-11/part-1 "ghijklmn") "ghjaabcc"))))
+    (is (= "abcdffaa" (day-11/part-1 "abcdefgh")))
+    (is (= "ghjaabcc" (day-11/part-1 "ghijklmn")))))

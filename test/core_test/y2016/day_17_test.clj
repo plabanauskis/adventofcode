@@ -4,16 +4,16 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-17/part-1 "ihgpwlah") "DDRRRD")))
+    (is (= "DDRRRD" (day-17/part-1 "ihgpwlah"))))
   (testing "2"
-    (is (= (day-17/part-1 "kglvqrro") "DDUDRLRRUDRD")))
+    (is (= "DDUDRLRRUDRD" (day-17/part-1 "kglvqrro"))))
   (testing "3"
-    (is (= (day-17/part-1 "ulqzkmiv") "DRURDRUDDLLDLUURRDULRLDUUDDDRR"))))
+    (is (= "DRURDRUDDLLDLUURRDULRLDUUDDDRR" (day-17/part-1 "ulqzkmiv")))))
 
 (deftest part-2
   (testing "1"
-    (is (= (day-17/part-2 "ihgpwlah") 370)))
+    (is (= 370 (day-17/part-2 "ihgpwlah"))))
   (testing "2"
-    (is (= (day-17/part-2 "kglvqrro") 492)))
+    (is (= 492 (day-17/part-2 "kglvqrro"))))
   (testing "3"
-    (is (= (day-17/part-2 "ulqzkmiv") 830))))
+    (is (= 830 (day-17/part-2 "ulqzkmiv")))))

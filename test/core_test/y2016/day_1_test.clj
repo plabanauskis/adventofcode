@@ -4,12 +4,12 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-1/part-1 "R2, L3") 5)))
+    (is (= 5 (day-1/part-1 "R2, L3"))))
   (testing "2"
-    (is (= (day-1/part-1 "R2, R2, R2") 2)))
+    (is (= 2 (day-1/part-1 "R2, R2, R2"))))
   (testing "3"
-    (is (= (day-1/part-1 "R5, L5, R5, R3") 12))))
+    (is (= 12 (day-1/part-1 "R5, L5, R5, R3")))))
 
 (deftest part-2
   (testing "4"
-    (is (= (day-1/part-2 "R8, R4, R4, R8") 4))))
+    (is (= 4 (day-1/part-2 "R8, R4, R4, R8")))))

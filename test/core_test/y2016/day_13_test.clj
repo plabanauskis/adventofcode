@@ -5,4 +5,4 @@
 (deftest part-1
   (testing "1"
     (with-bindings {#'day-13/destination [7 4]}
-      (is (= (day-13/part-1 "10") 11)))))
+      (is (= 11 (day-13/part-1 "10"))))))

@@ -6,9 +6,9 @@
 (deftest part-1
   (testing "17"
     (with-bindings {#'day-17/volume 25}
-      (is (= (day-17/part-1 (read-resource "2015-test/17.txt")) 4)))))
+      (is (= 4 (day-17/part-1 (read-resource "2015-test/17.txt")))))))
 
 (deftest part-2
   (testing "17"
     (with-bindings {#'day-17/volume 25}
-      (is (= (day-17/part-2 (read-resource "2015-test/17.txt")) 3)))))
+      (is (= 3 (day-17/part-2 (read-resource "2015-test/17.txt")))))))

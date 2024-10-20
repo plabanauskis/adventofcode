@@ -5,4 +5,4 @@
 (deftest part-1
   (testing "1"
     (with-bindings {#'day-18/rows 10}
-      (is (= (day-18/part-1 ".^^.^.^^^^") 38)))))
+      (is (= 38 (day-18/part-1 ".^^.^.^^^^"))))))

@@ -6,4 +6,4 @@
 (deftest part-1
   (testing "1"
     (with-bindings {#'day-10/microchips #{2 5}}
-      (is (= (day-10/part-1 (read-resource "2016-test/10.txt")) 2)))))
+      (is (= 2 (day-10/part-1 (read-resource "2016-test/10.txt")))))))

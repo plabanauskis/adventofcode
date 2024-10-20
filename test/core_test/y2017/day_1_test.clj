@@ -4,22 +4,22 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-1/part-1 "1122") 3)))
+    (is (= 3 (day-1/part-1 "1122"))))
   (testing "2"
-    (is (= (day-1/part-1 "1111") 4)))
+    (is (= 4 (day-1/part-1 "1111"))))
   (testing "3"
-    (is (= (day-1/part-1 "1234") 0)))
+    (is (= 0 (day-1/part-1 "1234"))))
   (testing "4"
-    (is (= (day-1/part-1 "91212129") 9))))
+    (is (= 9 (day-1/part-1 "91212129")))))
 
 (deftest part-1
   (testing "1"
-    (is (= (day-1/part-2 "1212") 6)))
+    (is (= 6 (day-1/part-2 "1212"))))
   (testing "2"
-    (is (= (day-1/part-2 "1221") 0)))
+    (is (= 0 (day-1/part-2 "1221"))))
   (testing "3"
-    (is (= (day-1/part-2 "123425") 4)))
+    (is (= 4 (day-1/part-2 "123425"))))
   (testing "4"
-    (is (= (day-1/part-2 "123123") 12)))
+    (is (= 12 (day-1/part-2 "123123"))))
   (testing "5"
-    (is (= (day-1/part-2 "12131415") 4))))
+    (is (= 4 (day-1/part-2 "12131415")))))

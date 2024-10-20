@@ -5,4 +5,4 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-4/part-1 (read-resource "2016-test/4.txt")) 1514))))
+    (is (= 1514 (day-4/part-1 (read-resource "2016-test/4.txt"))))))

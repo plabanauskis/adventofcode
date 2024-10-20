@@ -6,4 +6,4 @@
 (deftest part-1
   (testing "23"
     (with-bindings {#'day-23/resulting-register :a}
-      (is (= (day-23/part-1 (read-resource "2015-test/23.txt")) 2)))))
+      (is (= 2 (day-23/part-1 (read-resource "2015-test/23.txt")))))))

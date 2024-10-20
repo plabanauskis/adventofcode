@@ -4,7 +4,7 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-3/part-1 "1") 0))
-    (is (= (day-3/part-1 "12") 3))
-    (is (= (day-3/part-1 "23") 2))
-    (is (= (day-3/part-1 "1024") 31))))
+    (is (= 0 (day-3/part-1 "1")))
+    (is (= 3 (day-3/part-1 "12")))
+    (is (= 2 (day-3/part-1 "23")))
+    (is (= 31 (day-3/part-1 "1024")))))

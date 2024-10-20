@@ -4,6 +4,6 @@
 
 (deftest part-1
   (testing "1"
-    (is (= (day-4/part-1 "abcdef") 609043)))
+    (is (= 609043 (day-4/part-1 "abcdef"))))
   (testing "2"
-    (is (= (day-4/part-1 "pqrstuv") 1048970))))
+    (is (= 1048970 (day-4/part-1 "pqrstuv")))))

@@ -5,4 +5,4 @@
 (deftest part-1
   (testing "1"
     (with-bindings {#'day-16/disk 20}
-      (is (= (day-16/part-1 "10000") "01100")))))
+      (is (= "01100" (day-16/part-1 "10000"))))))

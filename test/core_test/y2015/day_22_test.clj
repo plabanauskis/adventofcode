@@ -6,6 +6,6 @@
 (deftest part-1
   (with-bindings {#'day-22/player {:hp 10 :mana 250}}
     (testing "22.1"
-      (is (= (day-22/part-1 (read-resource "2015-test/22/1.txt")) 226)))
+      (is (= 226 (day-22/part-1 (read-resource "2015-test/22/1.txt")))))
     (testing "22.2"
-      (is (= (day-22/part-1 (read-resource "2015-test/22/2.txt")) 641)))))
+      (is (= 641 (day-22/part-1 (read-resource "2015-test/22/2.txt")))))))
