@@ -22,7 +22,7 @@
   [input]
   (let [path (->> (clojure.string/split input #",")
                   (reduce (fn [[x y z max-distance] dir]
-                            (let [[nx ny nz :as coords] (step [x y z] dir)
+                            (let [[nx ny nz] (step [x y z] dir)
                                   current-distance (/ (+ (abs nx) (abs ny) (abs nz)) 2)]
                               [nx ny nz (max max-distance current-distance)]))
                           [0 0 0 0]))]
