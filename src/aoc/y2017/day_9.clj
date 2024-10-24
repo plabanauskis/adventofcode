@@ -1,6 +1,5 @@
 (ns aoc.y2017.day-9)
 
-
 (defn part-1
   [input]
   (->> input
