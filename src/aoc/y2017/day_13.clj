@@ -1,5 +1,4 @@
-(ns aoc.y2017.day-13
-  (:require [clojure.set]))
+(ns aoc.y2017.day-13)
 
 (defn- parse-line [l]
   (->> l

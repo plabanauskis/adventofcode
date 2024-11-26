@@ -52,23 +52,31 @@
        (take 2)
        (apply *)))
 
+(defn- format-bytes
+  [bytes]
+  (map #(format "%02x" %) bytes))
+
 (defn- calculate-hash
-  [sequence]
+  [sequence format-bytes-fn]
   (->> sequence
        (partition 16)
        (map #(apply bit-xor %))
-       (map #(format "%02x" %))
+       format-bytes-fn
        clojure.string/join))
 
-(defn part-2
-  [input]
-  (let [len (vec (concat (map int input) [17 31 73 47 23]))
+(defn knot-hash
+  [s format-bytes-fn]
+  (let [len (vec (concat (map int s) [17 31 73 47 23]))
         rounds 64]
     (loop [i 0
-           s (vec (range num-elements))
+           sequence (vec (range num-elements))
            curr 0
            skip 0]
       (if (= rounds i)
-        (calculate-hash s)
-        (let [[twisted new-curr new-skip] (reduce twist [s curr skip] len)]
+        (calculate-hash sequence format-bytes-fn)
+        (let [[twisted new-curr new-skip] (reduce twist [sequence curr skip] len)]
           (recur (inc i) twisted new-curr new-skip))))))
+
+(defn part-2
+  [input]
+  (knot-hash input format-bytes))

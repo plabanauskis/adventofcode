@@ -1,4 +1,5 @@
-(ns core-test.y2017.day-10-test
+(ns core-test.y2017.day-10-test(with-bindings {#'day-10/num-elements 5}
+      (is (= 12 (day-10/part-1 "3,4,1,5"))))
   (:require [clojure.test :refer :all]
             [aoc.y2017.day-10 :as day-10]))
 
