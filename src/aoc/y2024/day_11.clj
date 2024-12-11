@@ -16,7 +16,7 @@
                                    [(-> s (subs (quot l 2)) parse-long) num]])
     :else [[(* 2024 stone) num]]))
 
-(defn- blink
+(defn- apply-rules
   [stones]
   (let [new-stones (->> stones
                         (map apply-rule)
@@ -26,18 +26,18 @@
             {}
             new-stones)))
 
-(defn part-1
-  [input]
+(defn- blink
+  [input times]
   (loop [i 0
          stones (frequencies (parse-input input))]
-    (if (= i 25)
+    (if (= i times)
       (->> stones vals (apply +))
-      (recur (inc i) (blink stones)))))
+      (recur (inc i) (apply-rules stones)))))
+
+(defn part-1
+  [input]
+  (blink input 25))
 
 (defn part-2
   [input]
-  (loop [i 0
-         stones (frequencies (parse-input input))]
-    (if (= i 75)
-      (->> stones vals (apply +))
-      (recur (inc i) (blink stones)))))
+  (blink input 75))
