@@ -25,29 +25,23 @@
 
 (defn- traverse
   [regions row col]
-  (letfn [(find-unvisited-neighbours
-            [regions row col visited]
-            (let [neighbours (for [[drow dcol] [[-1 0] [1 0] [0 -1] [0 1]]
-                                  :let [nrow (+ row drow)
-                                        ncol (+ col dcol)]
-                                  :when (and (>= nrow 0)
-                                             (< nrow bitlength)
-                                             (>= ncol 0)
-                                             (< ncol bitlength)
-                                             (not (visited [nrow ncol]))
-                                             (= (get-in regions [nrow ncol]) \1))]
-                            [nrow ncol])]
-              neighbours))
-          (traverse-impl
-            [regions row col visited]
-            (let [unvisited-neighbours (find-unvisited-neighbours regions row col visited)]
-              (-> visited
-                  (conj [row col])
-                  (into (reduce (fn [visited [row col]]
-                                  (traverse-impl regions row col visited))
-                                visited
-                                unvisited-neighbours)))))]
-    (traverse-impl regions row col #{})))
+  (loop [q (conj clojure.lang.PersistentQueue/EMPTY [row col])
+         visited #{}]
+    (if-let [[r c] (peek q)]
+      (let [q' (pop q)]
+        (if (or (visited [r c])
+                (not= \1 (get-in regions [r c])))
+          (recur q' visited)
+          (let [visited' (conj visited [r c])
+                neighbours (for [[dr dc] [[-1 0] [1 0] [0 -1] [0 1]]
+                               :let [nr (+ r dr)
+                                     nc (+ c dc)]
+                               :when (and (>= nr 0) (< nr bitlength)
+                                          (>= nc 0) (< nc bitlength))]
+                           [nr nc])
+                q'' (reduce conj q' neighbours)]
+            (recur q'' visited'))))
+      visited)))
 
 (defn- count-regions
   [regions]
