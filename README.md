@@ -26,3 +26,4 @@ clojure -M:test -n core-test.y2015.day-1-test
 
 # Run tests matching a pattern
 clojure -M:test -r "y2015"
+```
